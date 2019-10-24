@@ -1,1 +1,22 @@
 /* Styles go here */
+
+body {
+    background-color: rgb(238, 255, 225);
+}
+
+nav {
+    color:#58ACFA;
+}
+
+h1 {
+    color: #2E9AFE;
+    font-size: 40px;
+}
+
+h2 {
+    color: #6E6E6E;
+}
+
+table, a {
+    color: #6E6E6E;     
+}

@@ -35,7 +35,7 @@ class App extends Component {
                     <table>
                       <thead>
                         <tr>
-                          <th>Content hochladen</th>
+                          <th> <h2>Content hochladen</h2></th>
                         </tr> <br />
                       </thead>
                       <tbody>
@@ -43,13 +43,18 @@ class App extends Component {
                           <input type='file' /> <br /><br />
                         </tr>
                         <tr>
-                          Beschreibung:  <input type='desc' /> <br /><br /><br /><br />
+
+                          <a> Beschreibung </a>
+
+                          <input type='desc' /> <br /><br /><br /><br />
+
                         </tr>
                         <input type='submit' />
                       </tbody>
                     </table>
                   </form>
                 </div>
+
 
               </div>
             </main>
