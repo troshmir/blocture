@@ -27,7 +27,7 @@ class App extends Component {
                 >
                   <img src={logo} className="App-logo" alt="logo" />
                 </a>
-                <h1>Who uses your image? seven o five biach</h1>
+                <h1>Who uses your image? seven o fiv    e biach</h1>
                 <p>
                   Edit <code>src/components/App.js</code> and save to reload.
                 </p>
