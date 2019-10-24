@@ -13,31 +13,48 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-           Blocture
+            Blocture
           </a>
         </nav>
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">
-              <div className="content mr-auto ml-auto"> <br/> <br/>
+              <div className="content mr-auto ml-auto"> <br /> <br />
                 <a
                   href="https://github.com/troshmir/blocture"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={logo} className="App-logo" alt="logo" />
-                </a>
-                <h1>Wer benutzt ihr Bild?</h1> <br/> <br/>
-            
-             <h2>Bild hochladen</h2>
-                <form>
-                  <input type='file'/>
-                  <input type='submit'/>
-                </form>
-                 
+                </a> <br /><br />
+                <h1>Blocture</h1> <br /> <br />
+
+
+                <div>
+                  <form>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Content hochladen</th>
+                        </tr> <br />
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <input type='file' /> <br /><br />
+                        </tr>
+                        <tr>
+                          Beschreibung:  <input type='desc' /> <br /><br /><br /><br />
+                        </tr>
+                        <input type='submit' />
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+
               </div>
             </main>
           </div>
+
         </div>
       </div>
     );
