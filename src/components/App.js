@@ -3,6 +3,30 @@ import logo from '../logo.png';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+      buffer: null
+    };
+  }
+
+  captureFile = (event) => {
+    event.preventDefault()
+    //process file for IPFS...
+    const file = event.target.files[0]
+    const reader = new window.FileReader()
+    reader.readAsArrayBuffer(file)
+    reader.anloadend = () => {
+      this.setState({ buffer: Buffer(reader.result) })
+    }
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault()
+    console.log("Submitting the form..")
+  }
+
   render() {
     return (
       <div>
@@ -27,30 +51,30 @@ class App extends Component {
                 >
                   <img src={logo} className="App-logo" alt="logo" />
                 </a> <br /><br />
+
                 <h1>Blocture</h1> <br /> <br />
 
 
                 <div>
-                  <form>
+                  <form onSubmit={this.onSubmit}>
                     <table>
-                      <thead>
-                        <tr>
-                          <th> <h2>Content hochladen</h2></th>
-                        </tr> <br />
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <input type='file' /> <br /><br />
-                        </tr>
-                        <tr>
+                      <div class='content'>
+                        <h2>Content hochladen</h2>
+                      </div>
 
-                          <a> Beschreibung </a>
 
-                          <input type='desc' /> <br /><br /><br /><br />
-
-                        </tr>
-                        <input type='submit' />
-                      </tbody>
+                      <br />
+                      <tr>
+                        <input type='file' onChange={this.captureFile} />
+                        <br />
+                      </tr>
+                      <br /><br />
+                      <tr>
+                        <a> Beschreibung:  </a>
+                        <input type='comment' />
+                        <br /><br /><br /><br />
+                      </tr>
+                      <input type='submit' />
                     </table>
                   </form>
                 </div>
